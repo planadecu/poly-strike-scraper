@@ -1,0 +1,28 @@
+{
+  "name": "poly-strike-scraper",
+  "version": "1.0.1",
+  "description": "A lightweight, dependency-free Node.js package to extract the exact strike price (`openPrice`) from Polymarket crypto up-down markets.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx index.ts",
+    "build": "tsc"
+  },
+  "keywords": [
+    "polymarket",
+    "scraper",
+    "strike-price",
+    "up-down-markets",
+    "crypto"
+  ],
+  "author": "Jordi Planadecursach",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^24.11.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "types": "dist/index.d.ts"
+}
