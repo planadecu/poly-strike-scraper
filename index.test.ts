@@ -8,7 +8,7 @@ test('scrapeStrikePrice extracts openPrice correctly from a mocked HTML payload'
     const originalFetch = global.fetch;
 
     // Mock fetch to return a specific HTML structure
-    global.fetch = async (url: RequestInfo | URL, options?: RequestInit) => {
+    global.fetch = async (url: any, options?: any) => {
         return new Response(
             `<html>
         <head>
@@ -52,7 +52,7 @@ test('scrapeStrikePrice extracts openPrice correctly from a mocked HTML payload'
 test('scrapeStrikePrice handles missing __NEXT_DATA__ gracefully', async (t) => {
     const originalFetch = global.fetch;
 
-    global.fetch = async (url: RequestInfo | URL, options?: RequestInit) => {
+    global.fetch = async (url: any, options?: any) => {
         return new Response(`<html><body><h1>No data here!</h1></body></html>`, { status: 200 });
     };
 
@@ -72,5 +72,5 @@ test('scrapeStrikePrice fetches real market data from Polymarket (Integration)',
 
     // We don't know the *exact* price since it's historical, but we know it should be a number (not null).
     assert.strictEqual(typeof price, 'number');
-    assert.ok(price > 0, 'Price should be greater than 0');
+    assert.ok(price! > 0, 'Price should be greater than 0');
 });
