@@ -14,7 +14,9 @@ This is a lightweight, dependency-free (aside from TypeScript environment) Node.
 
 ## Usage as a Module
 
-You can easily import the `scrapeStrikePrice` function into other applications:
+You can easily import the `scrapeStrikePrice` function into other applications.
+
+**Note:** The Polymarket URL should be the specific market URL, which is formatted as `https://polymarket.com/event/{eventSlug}/{marketSlug}`.
 
 ```typescript
 import { scrapeStrikePrice } from './index';

@@ -22,6 +22,8 @@ yarn add poly-strike-scraper
 
 You can easily import the `scrapeStrikePrice` function into your own applications. It returns the extracted price as a `number`, or `null` if the page structure has changed or the URL is invalid.
 
+**Note:** The Polymarket URL should be the specific market URL, which is formatted as `https://polymarket.com/event/{eventSlug}/{marketSlug}`.
+
 ```typescript
 import { scrapeStrikePrice } from 'poly-strike-scraper';
 
