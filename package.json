@@ -4,7 +4,7 @@
   "description": "A lightweight, dependency-free Node.js package to extract the exact strike price (`openPrice`) from Polymarket crypto up-down markets.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tsx --test index.test.ts",
     "start": "tsx index.ts",
     "build": "tsc"
   },
