@@ -70,7 +70,5 @@ test('scrapeStrikePrice fetches real market data from Polymarket (Integration)',
     const url = 'https://polymarket.com/event/eth-updown-5m-1772602500/eth-updown-5m-1772602500';
     const price = await scrapeStrikePrice(url);
 
-    // We don't know the *exact* price since it's historical, but we know it should be a number (not null).
-    assert.strictEqual(typeof price, 'number');
-    assert.ok(price! > 0, 'Price should be greater than 0');
+    assert.strictEqual(price, 1958.7351145966647, 'Strike price should exactly match the historic value');
 });
